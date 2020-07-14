@@ -4,12 +4,13 @@ import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { Corrs } from './model/corrs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  //api_url: string = "https://w-api-dev.herokuapp.com";
+  //api_url: string = "https://w-api-dev.herokuapp.com/v1";
   api_url: string = "v1";
 
   constructor(
@@ -23,7 +24,7 @@ export class ApiService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post<any>(this.api_url + "/correlacao", payload, httpOptions)
+    return this.http.post<any>("/api/v1/correlacao", payload, httpOptions)
       .pipe(
         map(response => response),
         catchError(
