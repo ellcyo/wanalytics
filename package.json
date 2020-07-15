@@ -33,8 +33,7 @@
         "@angular/cli": "~10.0.0",
         "@angular/compiler-cli": "~10.0.0",
         "typescript": "~3.9.5",
-        "express": "*",
-        "body-parser": "*"
+        "express": "*"
     },
     "devDependencies": {
         "@angular-devkit/build-angular": "~0.1000.0",
