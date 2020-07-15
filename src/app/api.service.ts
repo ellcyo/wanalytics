@@ -24,7 +24,7 @@ export class ApiService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post<any>("/api/v1/correlacao", payload, httpOptions)
+    return this.http.post<any>("https://w-api-dev.herokuapp.com/v1/correlacao", payload, httpOptions)
       .pipe(
         map(response => response),
         catchError(
