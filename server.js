@@ -1,12 +1,13 @@
 const express = require('express');
 const path = require('path');
-const cors = require('cors');
+//const cors = require('cors');
 
 const nomeApp = process.env.npm_package_name;
 const app = express();
 
-const whitelist = ['https://w-api-dev.herokuapp.com']; // list of allow domain
+//const whitelist = ['https://w-api-dev.herokuapp.com']; // list of allow domain
 
+/*
 const corsOptions = {
     origin: function(origin, callback) {
         if (!origin) {
@@ -23,6 +24,7 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions));
+*/
 
 app.use(express.static(`${__dirname}/dist/${nomeApp}`));
 
